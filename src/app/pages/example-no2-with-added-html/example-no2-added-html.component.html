@@ -1,0 +1,32 @@
+<jg-example-no2></jg-example-no2>
+
+<H2>Here the extra added HTML code for Component No2 starts </H2>
+<hr>
+<br>
+<label>Same variable Area [A] as component 2) above</label>
+<input
+  (keyup)='A.inputStr.set(($any($event.target).value));  keyup(A)'
+  [ngModel]='A.inputStr()'
+  class="inputBoxStyle2"
+  jgInputRestriction
+>
+<br>
+<p>Here the html code for input field of variable A:</p>
+
+<i>
+  <p>(keyup)='A.inputStr.set(($any($event.target).value)); keyup(A)'</p>
+  <p> [ngModel]='A.inputStr()'</p>
+  <p> class="inputBoxStyle2"</p>
+  <p> jgInputRestriction'</p>
+</i>
+
+<H5> Shows which routines in the example-no2 comp (super) are called by variable change in added HTML by
+  input: <br> {{ M() }} </H5>
+<H4>but signal of A.nominalvalue() will not updated in example-no2 comp (super) html and Message in both directions also
+  not</H4>
+<H5 class="inputBoxStyle2">shows the value of A.nominalValue() same of super: Area [] in added html: {{ A.nominalValue() }} </H5>
+<br>
+<hr>
+
+
+

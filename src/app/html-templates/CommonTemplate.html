@@ -1,0 +1,82 @@
+<h3>html scaffolding of the common html template of all components from here:</h3>
+<h2 class="TextAsButton">{{ htmlButtonName() }}</h2>
+
+Shows which seq. were triggerded by input a value: {{ M() }}
+<!--<img *ngIf="  jpgSource!==''||jpgSource "-->
+<!--     scr="jpgSource"-->
+<!--     alt="no image available"-->
+<!--     height="280"-->
+<!--     width="auto"-->
+<!--&gt;-->
+<br>
+<div><input
+  [ngModel]="htmlNameOfCalculation()"
+  class='inputLabel'
+  jgInputStringRestriction
+></div>
+<br>
+<div [id]=htmlButtonName>
+  <table *ngFor="let variable of  variableList; let i =   index ">
+    <tr *ngIf="  variable.varName() !==  undefined ">
+
+      <td class="col_1">
+        <input
+          (keyup)='variable.varLabel.set(($any($event.target).value))'
+          [ngModel]="variable.varLabel()"
+          class='inputLabel'
+          jgInputStringRestriction
+        >
+      </td>
+      <td class="col_2">
+        <label>[</label>
+      </td>
+      <td class="Col_3">
+        <input
+          (keyup)='variable.varSymbol.set(($any($event.target).value))'
+          [ngModel]="variable.varSymbol()"
+          class="inputvarSymbol"
+          jgInputStringRestriction
+        >
+      </td>
+      <td class="Col_4">
+        <label>]:</label>
+      </td>
+      <td class="Col_5">
+        <button>Bt</button>
+      </td>
+      <td>
+        <input
+          (keyup)='variable.inputStr.set(($any($event.target).value));  keyup(variable)'
+          [ngModel]='variable.inputStr()'
+          class="inputBoxStyle1"
+          jgInputRestriction
+        >
+      </td>
+      <td class="Col_9">
+        <label> = {{ variable.nominalValue() | number: '1.0-2' }}  {{ variable.unitBase() }} </label>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<h3
+  (click)="visibleCalc.set(!visibleCalc())"
+  class="TextAsButtonResults">Results as text list</h3>
+<div *ngIf="visibleCalc()"
+     class="PrintOfResults">
+  List of Variable from {{ htmlNameOfCalculation() }}:<br>
+
+  <table *ngFor="let variable of  variableList; let i =   index ">
+    <tr>
+      <td>
+        {{ variable.varLabel() }} [{{ variable.varSymbol() }}
+      </td>
+      <td>
+        ]: {{ variable.nominalValue() | number: '1.0-2' }} {{ variable.unitBase() }}<br>
+      </td>
+    </tr>
+  </table>
+</div>
+<h3>html scaffolding of the common html template ENDs here.</h3>
+
