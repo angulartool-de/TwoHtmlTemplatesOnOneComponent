@@ -6,11 +6,11 @@ In the moment, the same variable value is represented on both html pages and the
 The variable values are wrapped by an object (variablebuilder), the the properties are signals() (e.g. nominalValue()).
 
 # git clone and pnpm update  
-PS W:\>   git clone https://github.com/angulartool-de/TwoHtmlTemplatesOnOneComponent.git
-then
-PS W:\>   cd TwoHtmlTemplatesOnOneComponent
-PS W:\TwoHtmlTemplatesOnOneComponent>   pnpm update
-as the angular references have to been installed.
+PS W:\>   git clone https://github.com/angulartool-de/TwoHtmlTemplatesOnOneComponent.git  <br>
+then <br>
+PS W:\>   cd TwoHtmlTemplatesOnOneComponent <br>
+PS W:\TwoHtmlTemplatesOnOneComponent>   pnpm update <br>
+as the angular references have to been installed. <br>
 
 
 # TestAngular17
