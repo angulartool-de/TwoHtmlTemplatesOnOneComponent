@@ -5,7 +5,12 @@ Now I am looking for the best way to bind the variables of the component with th
 In the moment, the same variable value is represented on both html pages and the sub-routines running on the main and same  component.ts, but each html page will have differ values of the same variable!?
 The variable values are wrapped by an object (variablebuilder), the the properties are signals() (e.g. nominalValue()).
 
-
+# git clone and pnpm update  
+PS W:\>   git clone https://github.com/angulartool-de/TwoHtmlTemplatesOnOneComponent.git
+then
+PS W:\>   cd TwoHtmlTemplatesOnOneComponent
+PS W:\TwoHtmlTemplatesOnOneComponent>   pnpm update
+as the angular references have to been installed.
 
 
 # TestAngular17
